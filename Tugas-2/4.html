@@ -1,6 +1,6 @@
 <!--
 GIS
-Question No. 4
+No. 4
 switch between OSM map and Google Map using addEvenListener
 -->
 <html>
@@ -18,7 +18,7 @@ switch between OSM map and Google Map using addEvenListener
 
 			map = new google.maps.Map(document.getElementById("ma"), opt);
 			getCurLoc(map); //change center to our location, HTTP header required
-			setOsama(map); //set OSM map type ID
+			setOSM(map); //set OSM map type ID
 			changeCenter(map); //evenListener
 		}
 		function changeCenter(map){
@@ -43,7 +43,7 @@ switch between OSM map and Google Map using addEvenListener
 			}
 		}
 		// OSM map type ID configuration
-		function setOsama(){
+		function setOSM(){
 			//Defining OSM Map Type
 			var osmMapType = new google.maps.ImageMapType({
 		         	getTileUrl: function(coord, zoom) {
@@ -73,7 +73,7 @@ switch between OSM map and Google Map using addEvenListener
 	<!-- set My Current Location as gMap Center -->
 	<button id="here">go to my location</button>
 	<!-- set To OSM -->
-	<button onclick="setOsama();">SetOSM</button>
+	<button onclick="setOSM();">SetOSM</button>
 	<!-- set To gMap -->
 	<button onclick="setGMap();">set gMap</button>
 	<!-- map container -->
